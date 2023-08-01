@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admission Report</title>
+</head>
+<body>
+  <h1>Admission Report</h1>
+
+    {% block content %}
+        {% for i in StudentInfo %}
+            <br>
+            <img src="{{i.image.url}}" alt="Student Photo" height="150px" width="150px">
+            <b>Name: {{i.name}}</b> <br>
+            <strong>Age: {{i.age}}</strong> <br>
+            Address: {{i.address}} <br>
+            <em>Admission: {{i.admission_at}}</em> <br>
+        {% endfor %}
+    {% endblock content %}
+
+</body>
+</html>
